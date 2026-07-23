@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Stars Used to Sing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="game">
+
+    <!-- bg layer -->
+    <div id="background"></div>
+
+    <!-- hotspots here -->
+    <div id="hotspot-layer"></div>
+
+    <!-- character sprite -->
+    <div id="character"></div>
+
+    <!--  transition of flash -->
+    <div id="flash"></div>
+
+    <!--  title card -->
+    <div id="stage-title"></div>
+
+    <!-- dialogues -->
+    <div id="dialogue-box" class="hidden">
+      <div id="dialogue-text"></div>
+      <div id="dialogue-continue">▼ click to continue</div>
+    </div>
+
+    <!-- Ending choice buttons -->
+    <div id="choice-layer" class="hidden">
+      <button id="choice-remember">Remember</button>
+      <button id="choice-forget">Forget</button>
+    </div>
+
+    <!-- debuging  -->
+    <div id="debug-bar">
+      <span id="debug-flags"></span>
+    </div>
+
+  </div>
+
+  <script src="scenes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

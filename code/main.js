@@ -364,7 +364,7 @@ function playStarsLook(scene) {
     finishStarsLook(scene);
     return;
   }
-  img.src = "assets/stars.jpg";
+  img.src = "../assets/stars.jpg";
   img.draggable = false;
   img.setAttribute("draggable", "false");
 
@@ -1151,7 +1151,7 @@ function handleChoice(choice) {
       hideNightAtmosphere();
       clearEntities();
       if (world.bgEl) {
-        world.bgEl.style.backgroundImage = 'url("assets/maps/stage1.png")';
+        world.bgEl.style.backgroundImage = 'url("../assets/maps/stage1.png")';
         world.bgEl.style.filter = "saturate(0%) brightness(0.82)";
       }
       flashEl.classList.remove("active", "to-black");
@@ -1182,7 +1182,7 @@ function playForgetFlashForward(done) {
     const id = maps[i++];
     if (i > 1 && window.GameAudio) GameAudio.playTimeTravel();
     if (world.bgEl) {
-      world.bgEl.style.backgroundImage = `url("assets/maps/${id}.png")`;
+      world.bgEl.style.backgroundImage = `url("../assets/maps/${id}.png")`;
       world.bgEl.style.filter =
         id === "stage1"
           ? "saturate(0%) brightness(0.8)"

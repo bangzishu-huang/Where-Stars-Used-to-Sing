@@ -14,7 +14,7 @@ const MAP_ZOOM_TILES = {
 };
 
 function charSet(ids) {
-  const path = (id) => `assets/sprites/tile_${id}.png`;
+  const path = (id) => `../assets/sprites/tile_${id}.png`;
   return {
     left: path(ids[0]),
     down: path(ids[1]),
@@ -105,7 +105,7 @@ function applyMapSize(mask) {
 }
 
 async function fetchMask(mapId) {
-  const res = await fetch(`assets/maps/${mapId}_mask.json`);
+  const res = await fetch(`../assets/maps/${mapId}_mask.json`);
   return parseMask(await res.json());
 }
 
@@ -725,7 +725,7 @@ async function loadWorldMap(mapId, options) {
   world.active = true;
   world.paused = false;
   world.stageEl.classList.remove("hidden");
-  world.bgEl.style.backgroundImage = `url("assets/maps/${mapId}.png")`;
+  world.bgEl.style.backgroundImage = `url("../assets/maps/${mapId}.png")`;
   if (mapId === "stage1") {
     world.bgEl.style.filter = "saturate(0%) brightness(0.92)";
   } else if (mapId === "scene4map" || opts.night) {
@@ -977,21 +977,21 @@ function enableNearestWitness(interview) {
 }
 
 const BIRD_FRAMES = {
-  idle: ["assets/sprites/bird/r0_c0.png", "assets/sprites/bird/r0_c1.png"],
+  idle: ["../assets/sprites/bird/r0_c0.png", "../assets/sprites/bird/r0_c1.png"],
   fly: [
-    "assets/sprites/bird/r1_c0.png",
-    "assets/sprites/bird/r1_c1.png",
-    "assets/sprites/bird/r1_c2.png",
-    "assets/sprites/bird/r1_c3.png",
-    "assets/sprites/bird/r1_c4.png",
-    "assets/sprites/bird/r1_c5.png",
-    "assets/sprites/bird/r1_c6.png",
-    "assets/sprites/bird/r1_c7.png"
+    "../assets/sprites/bird/r1_c0.png",
+    "../assets/sprites/bird/r1_c1.png",
+    "../assets/sprites/bird/r1_c2.png",
+    "../assets/sprites/bird/r1_c3.png",
+    "../assets/sprites/bird/r1_c4.png",
+    "../assets/sprites/bird/r1_c5.png",
+    "../assets/sprites/bird/r1_c6.png",
+    "../assets/sprites/bird/r1_c7.png"
   ],
   peck: [
-    "assets/sprites/bird/r2_c0.png",
-    "assets/sprites/bird/r2_c1.png",
-    "assets/sprites/bird/r2_c2.png"
+    "../assets/sprites/bird/r2_c0.png",
+    "../assets/sprites/bird/r2_c1.png",
+    "../assets/sprites/bird/r2_c2.png"
   ]
 };
 
@@ -1174,8 +1174,8 @@ function departBird() {
 }
 
 const CHICKEN_FRAMES = {
-  idle: ["assets/sprites/chicken/f0.png", "assets/sprites/chicken/f1.png"],
-  walk: ["assets/sprites/chicken/f2.png", "assets/sprites/chicken/f3.png"]
+  idle: ["../assets/sprites/chicken/f0.png", "../assets/sprites/chicken/f1.png"],
+  walk: ["../assets/sprites/chicken/f2.png", "../assets/sprites/chicken/f3.png"]
 };
 
 function createChickens(spots) {

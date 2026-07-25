@@ -13,7 +13,7 @@ const VOL = {
 };
 
 const AUDIO = {
-  base: "assets/audio/",
+  base: "../assets/audio/",
   unlocked: false,
   muted: false,
 

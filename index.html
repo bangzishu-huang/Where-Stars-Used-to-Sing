@@ -1,50 +1,89 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Where Stars Used to Sing</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-  <div id="game">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where Stars Used to Sing</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-    <!-- bg layer -->
-    <div id="background"></div>
+  <body>
 
-    <!-- hotspots here -->
-    <div id="hotspot-layer"></div>
+    <div id="game">
+      <div id="background"></div>
 
-    <!-- character sprite -->
-    <div id="character"></div>
+      <!-- pixel maps -->
+      <div id="world-stage" class="hidden">
+        <div id="world-world">
+          <div id="world-bg"></div>
+          <div id="entity-layer"></div>
+        </div>
+      </div>
 
-    <!--  transition of flash -->
-    <div id="flash"></div>
+      <!-- stage 4 stuff -->
+      <div id="night-veil" class="hidden"></div>
+      <div id="petal-layer" class="hidden" aria-hidden="true"></div>
 
-    <!--  title card -->
-    <div id="stage-title"></div>
+      <!-- objective -->
+      <div id="objective-box" class="hidden">
+        <div id="objective-label">Objective</div>
+        <div id="objective-text"></div>
+      </div>
 
-    <!-- dialogues -->
-    <div id="dialogue-box" class="hidden">
-      <div id="dialogue-text"></div>
-      <div id="dialogue-continue">▼ click to continue</div>
+      <!-- hotspots here -->
+      <div id="hotspot-layer"></div>
+
+      <!-- character sprite -->
+      <div id="character"></div>
+
+      <!-- star sky look-up -->
+      <div id="stars-overlay" class="hidden">
+        <img id="stars-image" src="assets/stars.jpg" alt="" draggable="false">
+      </div>
+
+      <!--  transition of flash -->
+      <div id="flash"></div>
+
+      <!--  title card -->
+      <div id="stage-title"></div>
+
+      <!-- dialogues -->
+      <div id="dialogue-box" class="hidden">
+        <div id="dialogue-text"></div>
+        <div id="dialogue-continue">▼ click anywhere</div>
+      </div>
+
+      <!-- ending choices -->
+      <div id="choice-layer" class="hidden">
+        <button id="choice-remember">Remember</button>
+        <button id="choice-forget">Forget</button>
+      </div>
+
+      <!-- actual ending -->
+      <div id="ending-overlay" class="hidden">
+        <div id="ending-quote" class="hidden">
+          <p id="ending-quote-text"></p>
+          <p id="ending-quote-attr"></p>
+        </div>
+        <div id="ending-credits" class="hidden">
+          <div id="ending-credits-line"></div>
+          <button id="replay-button" class="hidden" type="button">Replay</button>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Ending choice buttons -->
-    <div id="choice-layer" class="hidden">
-      <button id="choice-remember">Remember</button>
-      <button id="choice-forget">Forget</button>
-    </div>
+    <script src="world.js?v=6"></script>
+    <script src="scenes.js?v=6"></script>
+    <script src="audio.js?v=6"></script>
+    <script src="main.js?v=6"></script>
 
-    <!-- debuging  -->
-    <div id="debug-bar">
-      <span id="debug-flags"></span>
-    </div>
+  </body>
 
-  </div>
-
-  <script src="scenes.js"></script>
-  <script src="js/main.js"></script>
-</body>
 </html>

@@ -1,0 +1,49 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sky4" cx="50%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#2a2450"/>
+      <stop offset="100%" stop-color="#07061a"/>
+    </radialGradient>
+    <radialGradient id="treeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4f9d8f" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4f9d8f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky4)"/>
+
+  <!-- dense starfield -->
+  <g fill="#ffffff">
+    <circle cx="80" cy="70" r="2"/><circle cx="150" cy="130" r="1.6"/><circle cx="240" cy="60" r="2.2"/>
+    <circle cx="330" cy="150" r="1.8"/><circle cx="420" cy="90" r="2"/><circle cx="90" cy="220" r="1.6"/>
+    <circle cx="200" cy="260" r="2"/><circle cx="1400" cy="80" r="2.2"/><circle cx="1480" cy="150" r="1.8"/>
+    <circle cx="1350" cy="200" r="2"/><circle cx="1500" cy="240" r="1.6"/><circle cx="1250" cy="100" r="2"/>
+    <circle cx="700" cy="60" r="1.8"/><circle cx="820" cy="100" r="1.6"/><circle cx="600" cy="140" r="2"/>
+    <circle cx="960" cy="70" r="2.2"/><circle cx="1050" cy="130" r="1.8"/>
+  </g>
+
+  <rect x="0" y="700" width="1600" height="200" fill="#0a0918"/>
+
+  <!-- ambient glow behind the tree -->
+  <circle cx="800" cy="640" r="360" fill="url(#treeGlow)"/>
+
+  <!-- the enormous tree, centered -->
+  <g transform="translate(800,720)">
+    <rect x="-30" y="-260" width="60" height="260" fill="#14101f"/>
+    <circle cx="0" cy="-340" r="220" fill="#181228"/>
+    <circle cx="-150" cy="-260" r="140" fill="#1b1430"/>
+    <circle cx="150" cy="-270" r="150" fill="#1b1430"/>
+    <circle cx="0" cy="-460" r="130" fill="#20183a"/>
+  </g>
+
+  <!-- child silhouette, sitting beneath the tree -->
+  <g transform="translate(800,760)">
+    <circle cx="0" cy="-34" r="14" fill="#0a0714"/>
+    <path d="M -16,-18 Q 0,-30 16,-18 L 20,10 Q 0,20 -20,10 Z" fill="#0a0714"/>
+  </g>
+
+  <!-- faint musical notes near the stars, echoing "the choir" -->
+  <g fill="#cfe8ff" opacity="0.7">
+    <circle cx="500" cy="200" r="3"/>
+    <circle cx="1100" cy="220" r="3"/>
+  </g>
+</svg>
